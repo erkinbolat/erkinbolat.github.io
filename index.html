@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erkin Bolat - Portfolyo</title>
+    <style>
+        /* Genel modern ve sade tasarım (Referans siteyle benzer) */
+        :root {
+            --bg-color: #fafafa;
+            --text-color: #202020;
+            --accent-color: #666;
+            --border-color: #e5e5e5;
+        }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
+            margin: 0; padding: 0; background-color: var(--bg-color); color: var(--text-color); 
+            line-height: 1.6;
+        }
+        nav { 
+            display: flex; justify-content: space-between; align-items: center; 
+            padding: 20px 5vw; background: rgba(250, 250, 250, 0.9); 
+            position: sticky; top: 0; border-bottom: 1px solid var(--border-color); z-index: 1000; 
+            backdrop-filter: blur(5px);
+        }
+        nav ul { list-style: none; display: flex; gap: 2vw; margin: 0; padding: 0; font-size: 0.9rem;}
+        nav a { text-decoration: none; color: var(--text-color); font-weight: 500; transition: color 0.2s;}
+        nav a:hover { color: var(--accent-color); }
+        .logo { font-weight: 700; font-size: 1.2rem; text-decoration: none; color: var(--text-color); letter-spacing: 1px;}
+        
+        main { max-width: 900px; margin: 0 auto; padding: 0 5vw; }
+        section { padding: 80px 0; border-bottom: 1px solid var(--border-color); }
+        section:last-child { border-bottom: none; }
+        
+        .hero { display: flex; flex-direction: column; justify-content: center; min-height: 75vh; }
+        .hero p.role { font-size: 1rem; color: var(--accent-color); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; }
+        .hero h1 { font-size: clamp(3rem, 8vw, 5rem); margin: 0 0 20px 0; line-height: 1.1; font-weight: 800; letter-spacing: -1px;}
+        .hero h1 em { font-style: normal; color: var(--accent-color); }
+        
+        .section-header { display: flex; align-items: baseline; margin-bottom: 40px; }
+        .section-header span { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; color: var(--accent-color); width: 150px; flex-shrink: 0;}
+        .section-content { flex-grow: 1; }
+        
+        h3 { font-size: 1.3rem; margin: 0 0 10px 0; }
+        .item-meta { font-size: 0.9rem; color: var(--accent-color); margin-bottom: 5px; }
+        .card { margin-bottom: 40px; }
+        
+        .tags { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 15px; }
+        .tags span { background: #eee; padding: 6px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 500;}
+        
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+        .grid-2 ul { padding-left: 20px; margin-top: 10px;}
+        .grid-2 li { margin-bottom: 5px; }
+        
+        a.btn { display: inline-block; margin-top: 10px; color: var(--text-color); font-weight: 600; text-decoration: none; border-bottom: 1px solid var(--text-color); }
+        
+        footer { text-align: center; padding: 40px 20px; font-size: 0.9rem; color: var(--accent-color); }
+        
+        @media (max-width: 768px) {
+            nav ul { display: none; } /* Mobilde menüyü gizle, basitlik için */
+            .section-header { flex-direction: column; }
+            .section-header span { margin-bottom: 20px; }
+            .grid-2 { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="#hero" class="logo">E.BOLAT</a>
+    <ul>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#systems">Technical Domains</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<main>
+    <!-- HERO SECTION -->
+    <section id="hero" class="hero">
+        <p class="role">Electrical & Electronics Engineer · Embedded Systems & Hardware</p>
+        <h1>Erkin<br><em>Bolat</em></h1>
+    </section>
+
+    <!-- PHILOSOPHY SECTION -->
+    <section id="philosophy">
+        <div class="section-header">
+            <span>Engineering Philosophy</span>
+            <div class="section-content">
+                <p>
+                    Altium Designer ve Proteus kullanarak <strong>printed circuit board</strong> (baskı devre kartı - PCB) tasarımı yapmaktan, STM32, ESP32 ve PIC serisi mikrodenetleyiciler (microcontrollers) üzerinde C/C++ ile <strong>embedded software</strong> (gömülü yazılım) geliştirmekten büyük keyif alıyorum.
+                </p>
+                <p>
+                    Aynı zamanda MATLAB ve Simulink üzerinde <strong>system modeling</strong> (sistem modelleme) ve <strong>signal processing</strong> (sinyal işleme) çalışmaları yürütüyorum. <strong>Low-level software</strong> (düşük seviyeli yazılım) mimarilerinden <strong>power electronics</strong> (güç elektroniğine) kadar geniş bir <strong>hardware/software</strong> (donanım/yazılım) yelpazesinde, sistemlerin en temel çalışma mantığını anlamak ve bunları güvenilir çözümlere dönüştürmek en büyük motivasyonum.
+                </p>
+                <div class="tags">
+                    <span>Embedded Systems</span>
+                    <span>Hardware Design</span>
+                    <span>PCB Layout</span>
+                    <span>Signal Processing</span>
+                    <span>Power Electronics</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EDUCATION SECTION -->
+    <section id="education">
+        <div class="section-header">
+            <span>Education</span>
+            <div class="section-content">
+                <div class="card">
+                    <div class="item-meta">Eylül 2021 - Haziran 2026</div>
+                    <h3>B.Sc. Electrical and Electronics Engineering</h3>
+                    <p>Ostim Teknik Üniversitesi, Ankara</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERIENCE SECTION -->
+    <section id="experience">
+        <div class="section-header">
+            <span>Experience</span>
+            <div class="section-content">
+                <div class="card">
+                    <div class="item-meta">Temmuz 2024 - Şubat 2026 (Farklı Dönemlerde)</div>
+                    <h3>Arlentus Kontrol Elektronik</h3>
+                    <p>Stajyer / Aday Mühendis</p>
+                    <p><strong>Wireless devices</strong> (kablosuz cihazlar) için devre tasarımı, Altium Designer ile <strong>hardware design</strong> (donanım tasarımı) ve STM32, ESP32 gibi mikrodenetleyiciler için C/C++ ile <strong>firmware</strong> (donanım yazılımı) geliştirme süreçlerinde görev aldım.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="item-meta">Mayıs 2024 - Temmuz 2024</div>
+                    <h3>Tünelsan Elektronik</h3>
+                    <p>Stajyer Mühendis</p>
+                    <p><strong>Battery systems</strong> (batarya sistemleri) kurulumu, bakımı ve onarımı üzerine uygulamalı saha ve atölye çalışmaları gerçekleştirdim.</p>
+                </div>
+
+                <div class="card">
+                    <div class="item-meta">Haziran 2023 - Ağustos 2023</div>
+                    <h3>Gayda Enerji Mühendislik</h3>
+                    <p>Stajyer Mühendis</p>
+                    <p>Devre kartı üretimi (circuit board manufacturing) süreçlerini takip ettim ve mikroişlemci yazılımları geliştirdim.</p>
+                </div>
+
+                <div class="card">
+                    <div class="item-meta">Ocak 2023 - Şubat 2023</div>
+                    <h3>HZR Grup Yapı Malzemeleri</h3>
+                    <p>Stajyer Mühendis</p>
+                    <p><strong>Cabling</strong> (kablaj) ve <strong>control panel</strong> (kontrol panosu) donanım montajı işlemlerini yürüttüm.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects">
+        <div class="section-header">
+            <span>Projects</span>
+            <div class="section-content">
+                <div class="card">
+                    <div class="item-meta">Mezuniyet Projesi</div>
+                    <h3>Underwater Wireless Optical Communication (UWOC) System</h3>
+                    <p>Mavi lazer kullanarak sualtı optik iletişim sistemlerinin teorik modellemesini gerçekleştirdim. Sıcaklık, tuzluluk ve türbülans gibi çevresel faktörlerin <strong>signal-to-noise ratio</strong> (sinyal-gürültü oranı - SNR) üzerindeki etkisini <strong>On-Off Keying</strong> (OOK) modülasyonu kullanarak MATLAB ve Simulink ortamında modelledim.</p>
+                    <div class="tags">
+                        <span>MATLAB</span> <span>Simulink</span> <span>Signal Processing</span> <span>OOK Modulation</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="item-meta">Kişisel Ar-Ge</div>
+                    <h3>Custom UAV & Quadcopter Design</h3>
+                    <p>Fotoblok (foam board), <strong>brushless motors</strong> (fırçasız motorlar) ve <strong>Electronic Speed Controllers</strong> (ESC) bileşenlerini kullanarak <strong>fixed-wing</strong> (sabit kanatlı) İHA ve quadcopter tasarımı. <strong>Aerodynamics</strong> (aerodinamik) yapı inşası ve <strong>flight controller</strong> (uçuş kontrolcüsü) mantığının entegrasyonu.</p>
+                    <div class="tags">
+                        <span>UAV Design</span> <span>Aerodynamics</span> <span>Flight Controller</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="item-meta">Donanım Geliştirme</div>
+                    <h3>Motor Control & Power Electronics Hardware</h3>
+                    <p>TB6600 <strong>motor drivers</strong> (motor sürücüleri), <strong>BLDC</strong> (fırçasız DC) motorlar, <strong>step motors</strong> (adım motorları), <strong>encoders</strong> (enkoderler), <strong>Low Dropout Regulators</strong> (LDO regülatörleri) ve <strong>Transient Voltage Suppression</strong> (TVS) diyotları kullanarak uçtan uca <strong>power electronics</strong> (güç elektroniği) projeleri ve baskı devre tasarımı.</p>
+                    <div class="tags">
+                        <span>Power Electronics</span> <span>PCB Design</span> <span>Motor Control</span> <span>Sensors</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TECHNICAL DOMAINS SECTION -->
+    <section id="systems">
+        <div class="section-header">
+            <span>Technical Domains</span>
+            <div class="section-content grid-2">
+                <div>
+                    <h3>Programming</h3>
+                    <ul>
+                        <li>C / C++</li>
+                        <li>MATLAB</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Embedded & Hardware</h3>
+                    <ul>
+                        <li>Altium Designer & Proteus</li>
+                        <li>STM32, dsPIC33, PIC18F4550, ESP32</li>
+                        <li>MPLAB X IDE, Arduino IDE</li>
+                        <li>SPI, I2C, UART İletişim Protokolleri</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Systems</h3>
+                    <ul>
+                        <li>Signal Processing (Sinyal İşleme)</li>
+                        <li>System Modeling (Simulink)</li>
+                        <li>Power Electronics (Güç Elektroniği)</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Languages</h3>
+                    <ul>
+                        <li>Turkish (Native)</li>
+                        <li>English (Professional Working)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact">
+        <div class="section-header">
+            <span>Contact</span>
+            <div class="section-content">
+                <p>İletişime geçmek veya projelerimi detaylı incelemek için ağlarıma göz atabilirsiniz:</p>
+                <div style="margin-top: 20px; display: flex; gap: 20px;">
+                    <!-- BURADAKİ LİNKLERİ KENDİ HESAPLARINLA DEĞİŞTİRMELİSİN -->
+                    <a href="https://github.com/KULLANICI_ADIN" target="_blank" class="btn">GitHub ↗</a>
+                    <a href="https://linkedin.com/in/KULLANICI_ADIN" target="_blank" class="btn">LinkedIn ↗</a>
+                </div>
+                <p style="margin-top: 30px; font-size: 0.9rem; color: #666;">📍 Ostim / Ankara, Türkiye</p>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    © 2026 Erkin Bolat
+</footer>
+
+</body>
+</html>
